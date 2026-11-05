@@ -1,1 +1,30 @@
-# Impleo data\n\nData files used by the Impleo examples and training workflow.\n\n- xample/starmap_p128_v0/ contains runnable example input and reference arrays.\n- 	raining/observations/ contains dataset observation tables.\n- Complete expression matrices and preprocessing files are distributed as versioned Release assets because GitHub repository files are limited to 100 MB.\n\nDownload complete data with python -m data.download --packs example training.\n\nRelease assets contain only data packages required by the downloader.\n
+# Impleo Data
+
+Data companion repository for [Impleo](https://github.com/blueWHC-Ring/Impleo).
+
+## Contents
+
+```text
+example/
+└── starmap_p128_v0/
+    ├── input_panel.npy
+    ├── truth.npy
+    ├── protocol.json
+    └── hidden_genes.json
+
+training/
+└── observations/
+    └── <dataset>/full_obs.csv.gz
+```
+
+The complete expression matrices and preprocessing files are available in the [v1.0.0 data release](https://github.com/blueWHC-Ring/Impleo-data/releases/tag/v1.0.0).
+
+## Download
+
+From a local Impleo checkout, run:
+
+```bash
+python -m data.download --packs example training
+```
+
+The repository and release assets contain only the data required by the Impleo workflow.
